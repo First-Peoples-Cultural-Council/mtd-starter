@@ -1,14 +1,66 @@
 {
-    "config": {
-        "L1": "Danish",
-        "L2": "English",
-        "optional_field_title": "Optional Info",
-        "alphabet": "../alphabet.csv"
-    },
-    "data": [
-        {
-            "manifest": "./manifest.json",
-            "resource": "../data/data.csv"
-        }
+  "config": {
+    "L1": "Secwepemc",
+    "L2": "English",
+    "optional_field_title": "Optional Info",
+    "alphabet": [
+      "a",
+      "á",
+      "c",
+      "cw",
+      "e",
+      "é",
+      "g",
+      "gw",
+      "g̓w",
+      "h",
+      "i",
+      "í",
+      "k",
+      "kw",
+      "k̕",
+      "k̕w",
+      "l",
+      "ĺ",
+      "ll",
+      "m",
+      "m̓",
+      "n",
+      "n̓",
+      "o",
+      "ó",
+      "p",
+      "p̓",
+      "q",
+      "qw",
+      "q̓",
+      "q̓w",
+      "r",
+      "r̓",
+      "s",
+      "t",
+      "ts",
+      "ts'",
+      "t̕",
+      "u",
+      "ú",
+      "w",
+      "w̓",
+      "x",
+      "xw",
+      "y",
+      "y̓",
+      "7"
     ]
+  },
+  "data": [
+    {
+      "manifest": "./manifest_words.json",
+      "resource": "../data/words/FVWord.json"
+    },
+    {
+      "manifest": "./manifest_phrases.json",
+      "resource": "../data/phrases/FVPhrase.json"
+    }
+  ]
 }
