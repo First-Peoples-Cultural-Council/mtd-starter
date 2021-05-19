@@ -61,10 +61,7 @@ jobs:
           token: ${{ secrets.FV_GH_PAT }}
           path: ui
           commit-message: Update data files
-	  title: 'Data Update'
-	  delete-branch: true
-	  label: |
-	    data update
-	  body: |
-	    Data files updated via GitHub Repo `${{ github.event.repository.name }}`
-          
+          title: 'Data Update'
+          delete-branch: true
+          label: data update
+          body: Data files updated via GitHub Repo `${{ github.event.repository.name }}`
