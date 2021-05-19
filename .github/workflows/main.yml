@@ -25,7 +25,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: ui
-          ref: release
           repository: First-Peoples-Cultural-Council/${{ github.event.repository.name }}-ui
           persist-credentials: false
           token: ${{ secrets.FV_GH_PAT }}
