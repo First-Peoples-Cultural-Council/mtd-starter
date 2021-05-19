@@ -6,7 +6,7 @@ name: Compile
 # events but only for the release branch
 on:
   release:
-    types: [prereleased]
+    types: [prereleased,released]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,9 +38,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install mothertongues
       - name: Verify data files
+        if: ${{ github.event_name == 'released' }}
         run: | 
-          chmod +x ./main/scripts/verify.sh
-          ./main/scripts/verify.sh
+         chmod +x ./main/scripts/verify.sh
+         ./main/scripts/verify.sh
       - name: compile
         run: |
           cd $GITHUB_WORKSPACE/main/config
@@ -59,7 +60,6 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.FV_GH_PAT }}
-          directory: ./ui
-          repository: First-Peoples-Cultural-Council/${{ github.event.repository.name }}-ui
+          path: ui
           commit-message: Update data files
           
